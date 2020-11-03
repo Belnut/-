@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.k.project.PhoneEmailActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="본인확인 이메일"
+        android:id="@+id/textView9"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디, 비밀번호 찾기 등 본인확인이 필요한 경우 사용할 이메일 주소입니다.\n\n안전한 정보 변경을 위해 현재 이메일 주소를 정확히 입력해주세요."
+        android:id="@+id/textView12"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/CurrentEmail"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editbox"
+        android:layout_marginBottom="10dp"
+        android:hint="현재 이메일 주소"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/NewEmail"
+        android:background="@drawable/editbox"
+        android:layout_below="@+id/CurrentEmail"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:hint="새로운 이메일 주소"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/line2"
+        android:layout_below="@+id/buttonEmail"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="수정"
+        android:id="@+id/buttonEmail"
+        android:layout_below="@+id/NewEmail"
+        android:layout_alignParentEnd="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="휴대전화"
+        android:id="@+id/textView13"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서로의 긴밀한 연락을 위해서 정확한 휴대전화 번호를 입력해 주세요."
+        android:id="@+id/textView14"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/phone_first"
+        android:background="@drawable/editbox"
+        android:entries="@array/phone_fst_num_list"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentStart="true"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@drawable/editbox"
+        android:layout_marginLeft="5dp"
+        android:inputType="number"
+        android:id="@+id/phone_mid"
+        android:layout_alignTop="@+id/phone_first"
+        android:layout_toEndOf="@+id/textView13"
+        android:textSize="20dp"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@drawable/editbox"
+        android:layout_marginLeft="10dp"
+        android:inputType="number"
+        android:id="@+id/phone_last"
+        android:layout_alignTop="@+id/phone_mid"
+        android:layout_toEndOf="@+id/phone_mid"
+        android:textSize="20dp"
+        android:gravity="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="수정"
+        android:id="@+id/buttonPhone"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e111142f">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IT402"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/textView" />
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:background="#00ffffff"
+        android:id="@+id/profile_img">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용자 이름"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@+id/profile_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/user_name" />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/user_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view" />
+
+    <RadioGroup
+        android:layout_centerHorizontal="true"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:button="@drawable/calendar_check"
+        android:layout_below="@+id/view"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/fragment_calendar_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:button="@drawable/calendar_check"
+            android:layout_below="@+id/view"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:onClick="clickNavigateBtn" />
+
+        <RadioButton
+            android:id="@+id/fragment2_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:button="@drawable/do_today_check"
+            android:layout_below="@+id/view"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:onClick="clickNavigateBtn"/>
+
+        <RadioButton
+            android:id="@+id/fragment3_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:button="@drawable/special_day_check"
+            android:layout_below="@+id/view"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:onClick="clickNavigateBtn"/>
+
+        <RadioButton
+            android:id="@+id/fragment4_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:button="@drawable/schadule_check"
+            android:layout_below="@+id/view"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="10dp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#3b3b3b"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/setting_btn"
+            android:onClick="bottom_menu_click"
+            android:src="@drawable/ic_setting"
+            android:background="#11142f" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_schadule_setting"
+            android:background="#11142f" />
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search"
+            android:background="#11142f" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

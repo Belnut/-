@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bar">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:id="@+id/textView6"
+        android:textSize="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:inputType="number"
+            android:id="@+id/reg_stdnum_edit"
+            android:hint="  학번" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/reg_id_edit"
+            android:inputType="textUri"
+            android:hint="  아이디" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="중복 확인"
+            android:id="@+id/reg_check_id"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp" >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/reg_pwd_edit"
+            android:hint="  비밀번호" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp" >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/reg_check_pwd"
+            android:hint="  비밀번호 재확인" />
+
+        <ImageView
+            android:layout_marginLeft="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/same_or_not"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp" >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/reg_name_edit"
+            android:hint="  이름" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp" >
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:text="생년월일"
+            android:id="@+id/reg_birth_btn"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp" >
+
+        <Spinner
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/spin_phnum"
+            android:background="@drawable/textbox"
+            android:entries="@array/phone_fst_num_list"/>
+
+        <EditText
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="15dp"
+            android:inputType="number"
+            android:id="@+id/reg_phnum_mid_edit" />
+
+        <EditText
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="15dp"
+            android:inputType="number"
+            android:id="@+id/reg_phnum_last_edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/textbox"
+            android:layout_marginLeft="30dp"
+            android:inputType="textUri"
+            android:hint="                         @address.com"
+            android:id="@+id/reg_mail_edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:id="@+id/reg_cancel_btn"
+            android:onClick="onClick"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/cancel_img"
+            android:layout_marginLeft="75dp"
+            android:textSize="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/add_user"
+            android:id="@+id/register_btn"
+            android:onClick="onClick"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</LinearLayout>
